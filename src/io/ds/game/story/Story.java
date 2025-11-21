@@ -35,11 +35,12 @@ public class Story {
 public class Main {
     public static void main(String[] args) {
         Story story = new Story();
-        Dialogue intro = new Dialogue("scene-1","Mao ni first scene...", Type.DIALOG);
-
-        Dialogue choiceScene = new Dialogue("scene-2","Tas next... asa ka muadto?", Type.CHOICE);
+        //example lng, usabon pa kuni mag sleep pako
+        Dialogue intro = new Dialogue("scene-1","something chuchuucucucucuc", Type.DIALOG);
+        Dialogue choiceScene = new Dialogue("scene-2","Tas next... something chuchuchuch", Type.CHOICE);
         DialogueOption opt1 = new DialogueOption("Sa left!", null);
         DialogueOption opt2 = new DialogueOption("Sa right!", null);
+        
         choiceScene.setOptions(new DialogueOption[]{opt1, opt2});
         intro.setNextDialogue(choiceScene);
         story.addDialogue(intro);
